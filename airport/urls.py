@@ -36,4 +36,7 @@ urlpatterns = [
         views.CancelBooking.as_view(),
         name="cancel-booking",
     ),
+    path("signin/",views.SigninView.as_view(),name="signin"),
+    path("register/",views.RegisterView.as_view(),name="register"),
+    path("book/flight/<int:flight_id>/",views.CreateAPIView.as_view(),name="book-flight")
 ]
